@@ -13,7 +13,11 @@
                 <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo UTB" class="logo-img">
                 <h1 class="logo-text">Experiencia UTB</h1>
             </div>
-            <ul class="nav-links">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="{{ url_for('home') }}">Inicio</a></li>
                 <li><a href="{{ url_for('services') }}">Mapa de Recursos</a></li>
                 <li><a href="{{ url_for('utb') }}" class="active">Mi Escuela</a></li>

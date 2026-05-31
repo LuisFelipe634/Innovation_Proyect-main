@@ -58,6 +58,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // === 4. MENÚ MÓVIL (HAMBURGUESA) ===
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('primary-nav');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navLinks.classList.toggle('open');
+        });
+
+        // Close nav when resizing to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('open');
+            }
+        });
+    }
 });
 
 // === 4. FUNCIONES GLOBALES AUXILIARES ===

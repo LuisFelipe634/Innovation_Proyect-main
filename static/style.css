@@ -175,6 +175,49 @@ body::after {
     border-bottom: 2px solid var(--navbar-text);
 }
 
+/* Mobile hamburger toggle */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--navbar-text);
+    position: relative;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: var(--navbar-text);
+    transition: transform 0.25s ease, top 0.25s ease, opacity 0.25s ease;
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+/* When nav is open, animate into X */
+.nav-toggle[aria-expanded="true"] .hamburger {
+    background: transparent;
+}
+.nav-toggle[aria-expanded="true"] .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--surface-bg) 0%, var(--accent-blue) 100%);
@@ -535,6 +578,62 @@ footer {
     .navbar .container {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    /* Alinear el logo a la izquierda y dejar espacio para el botón hamburguesa */
+    .navbar .container {
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-right: 3.5rem; /* espacio para el toggle */
+    }
+
+    .logo-section {
+        justify-content: flex-start;
+        margin-left: 0;
+        width: 100%;
+        padding-left: 0.25rem;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+        white-space: normal;
+        margin-left: 0.35rem;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 16px;
+        top: 14px;
+        z-index: 120;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0.75rem;
+        padding: 0.75rem 1rem 1rem 1rem;
+        background: linear-gradient(135deg, var(--navbar-gradient-start) 0%, var(--navbar-gradient-end) 100%);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.85rem 0.5rem;
+        width: 100%;
     }
 
     .hero-grid {
