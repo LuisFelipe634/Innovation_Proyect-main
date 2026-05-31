@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // === 1. LÓGICA DE PESTAÑAS (TABS) ===
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // 1. Remover la clase activa de todos los botones
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // 2. Ocultar todos los contenidos de las pestañas
             tabContents.forEach(content => content.classList.remove('active'));
 
-            // 3. Añadir la clase activa al botón que recibió el clic
             button.classList.add('active');
 
-            // 4. Mostrar el contenido correspondiente usando el atributo data-tab
-            const targetTabId = button.getAttribute('data-tab'); // Ej: "tab1"
+            const targetTabId = button.getAttribute('data-tab');
             const targetContent = document.getElementById(targetTabId);
             
             if (targetContent) {
@@ -22,9 +18,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // === 2. SELECCIÓN DE ESCUELAS ===
+    const schoolButtons = document.querySelectorAll('.school-button');
+    const programLists = document.querySelectorAll('.program-list');
+
+    schoolButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            schoolButtons.forEach(b => b.classList.remove('active'));
+            programLists.forEach(p => p.classList.remove('active'));
+
+            btn.classList.add('active');
+            const key = btn.getAttribute('data-school');
+            const target = document.getElementById(`school-${key}`);
+            if (target) target.classList.add('active');
+        });
+    });
+
+    // === 3. LÓGICA DEL MAPA DE RECURSOS FILTRABLES (OPTIMIZADA) ===
+    const filterButtons = document.querySelectorAll('.btn-filter');
+    const serviceItems = document.querySelectorAll('.service-item');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            // Remover activo de los botones de filtro y asignarlo al actual
+            filterButtons.forEach(b => b.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const category = event.currentTarget.getAttribute('data-filter');
+
+            // Filtrar las tarjetas de recursos con transiciones limpias
+            serviceItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (category === 'todos' || itemCategory === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 });
 
-// Función opcional para el botón de la pestaña 1
+// === 4. FUNCIONES GLOBALES AUXILIARES ===
 function mostrarMensaje() {
     alert("¡Hola! La interactividad está funcionando correctamente. 🚀");
 }
@@ -35,24 +71,6 @@ function abrirTab(tabId) {
         button.click();
     }
 }
-
-// Selección de escuelas y visualización de programas
-document.addEventListener('DOMContentLoaded', () => {
-    const schoolButtons = document.querySelectorAll('.school-button');
-    const programLists = document.querySelectorAll('.program-list');
-
-    schoolButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            schoolButtons.forEach(b => b.classList.remove('active'));
-            programLists.forEach(p => p.classList.remove('active'));
-
-            btn.classList.add('active');
-            const key = btn.getAttribute('data-school'); // e.g., 'digital'
-            const target = document.getElementById(`school-${key}`);
-            if (target) target.classList.add('active');
-        });
-    });
-});
 
 function abrirEscuela(key) {
     const btn = document.querySelector(`.school-button[data-school="${key}"]`);

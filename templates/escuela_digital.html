@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facultad de Transformación Digital - UTB</title>
+    <title>Escuela de Transformación Digital - UTB</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/avif" href="{{ url_for('static', filename='images/digital.avif') }}">
 </head>
@@ -20,7 +20,6 @@
                 <li><a href="{{ url_for('utb') }}" class="active">Mi Escuela</a></li>
                 <li><a href="{{ url_for('about') }}">El Proyecto</a></li>
             </ul>
-                
         </div>
     </nav>
 
@@ -31,22 +30,25 @@
 
         <section class="tab-card animate-fade-in" style="margin-top: 1.5rem;">
             <h2>Escuela de Transformación Digital</h2>
-            <p class="lead">Espacios pensados para las carreras del mañana: Ingeniería de Sistemas, Ciencia de Datos y afines.</p>
+            <p class="lead">Espacios pensados para las carreras del mañana[cite: 3]: Ingeniería de Sistemas y Computación, Ciencia de Datos, Marketing y Transformación Digital, y Comunicación Social.</p>
             
             <div class="program-details">
                 <h3>Apoyos Clave y Recursos que encontrarás:</h3>
                 <div class="services-grid" style="margin-top: 1.5rem;">
                     <div class="service-item accent-blue">
+                        <div class="service-icon">💻</div>
                         <h3>Laboratorios de Cómputo Avanzados</h3>
-                        <p>Espacios equipados con herramientas de desarrollo de software moderno y servidores dedicados.</p>
+                        <p>Espacios equipados con herramientas de desarrollo de software moderno, servidores dedicados y software analítico para Big Data[cite: 3].</p>
                     </div>
                     <div class="service-item accent-blue">
-                        <h3>Células de Innovación Tecnológica</h3>
-                        <p>Aprende cómo integrarte a proyectos de desarrollo reales bajo metodologías ágiles desde el primer año.</p>
+                        <div class="service-icon">🎙️</div>
+                        <h3>Laboratorio de Comunicación y Medios</h3>
+                        <p>Estudios profesionales de radio, sets de televisión y salas de edición multimedia para proyectos periodísticos, creativos y de marketing.</p>
                     </div>
                     <div class="service-item accent-blue">
-                        <h3>Tutorías de Programación</h3>
-                        <p>Monitores expertos listos para ayudarte en lógica de programación y resolver dudas de tus asignaturas base.</p>
+                        <div class="service-icon">🤖</div>
+                        <h3>Tutorías de Lógica y Programación</h3>
+                        <p>Monitores expertos listos para ayudarte en lógica de programación y resolver dudas de tus asignaturas base[cite: 3].</p>
                     </div>
                 </div>
             </div>

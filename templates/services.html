@@ -19,7 +19,6 @@
                 <li><a href="/utb">Mi Escuela</a></li>
                 <li><a href="/about">El Proyecto</a></li>
             </ul>
-                
         </div>
     </nav>
 
@@ -28,57 +27,82 @@
             <h2>Mapa de Recursos Filtrables por Necesidad</h2>
             <p>¿Qué necesitas resolver hoy? Filtra los servicios institucionales clave de la UTB según lo que estás experimentando en tu primer semestre:</p>
             
-            <!-- SISTEMA DE FILTRADO INTERACTIVO (Creador de Alegrías) -->
             <div class="filter-buttons">
-                <button class="btn-filter active" onclick="filterResources('todos')">🌟 Mostrar Todos</button>
-                <button class="btn-filter" onclick="filterResources('academico')">📚 Apoyo Académico</button>
-                <button class="btn-filter" onclick="filterResources('bienestar')">❤️ Emocional / Bienestar</button>
-                <button class="btn-filter" onclick="filterResources('tecnologico')">⚙️ Plataformas y TIC</button>
-                <button class="btn-filter" onclick="filterResources('futuro')">💼 Crecimiento / Empleo</button>
+                <button class="btn-filter active" data-filter="todos">🌟 Mostrar Todos</button>
+                <button class="btn-filter" data-filter="academico">📚 Apoyo Académico</button>
+                <button class="btn-filter" data-filter="bienestar">❤️ Emocional / Bienestar</button>
+                <button class="btn-filter" data-filter="tecnologico">⚙️ Plataformas y TIC</button>
+                <button class="btn-filter" data-filter="futuro">💼 Crecimiento / Empleo</button>
             </div>
 
             <div class="services-grid" id="resources-grid">
-                <!-- Recurso 1 -->
                 <div class="service-item accent-blue" data-category="academico">
                     <div class="service-icon">📝</div>
                     <h3>Tutorías y Consejería Académica</h3>
                     <p>No esperes a que acabe el corte. Agenda acompañamiento personalizado con profesores y monitores para despejar dudas de materias críticas.</p>
                 </div>
-                <!-- Recurso 2 -->
                 <div class="service-item accent-blue" data-category="academico">
                     <div class="service-icon">📖</div>
                     <h3>Biblioteca y Material Digital</h3>
                     <p>Aprende a usar los metabuscadores y bases de datos indexadas de la UTB desde tus primeras semanas para optimizar tus entregas de talleres.</p>
                 </div>
-                <!-- Recurso 3 -->
+                <div class="service-item accent-blue" data-category="academico">
+                    <div class="service-icon">✍️</div>
+                    <h3>CELEE (Centro de Escritura)</h3>
+                    <p>¿Te cuesta redactar tus ensayos o informes? Solicita tutorías personalizadas para mejorar tu lectura, escritura y expresión oral académica.</p>
+                </div>
+
                 <div class="service-item accent-green" data-category="bienestar">
                     <div class="service-icon">🧠</div>
                     <h3>Bienestar Estudiantil y Psicología</h3>
-                    <p>El cambio de la escuela a la universidad puede ser abrumador. Cuentas con un equipo listo para escucharte, apoyarte en salud mental y manejo del estrés.</p>
+                    <p>El cambio a la universidad puede ser abrumador. Cuentas con un equipo listo para escucharte, apoyarte en salud mental y manejo del estrés.</p>
                 </div>
-                <!-- Recurso 4 -->
                 <div class="service-item accent-green" data-category="bienestar">
                     <div class="service-icon">⚽</div>
                     <h3>Deportes y Cultura UTB</h3>
                     <p>Desconéctate de las clases participando en los equipos universitarios, torneos internos, grupos de música y talleres artísticos.</p>
                 </div>
-                <!-- Recurso 5 -->
+                <div class="service-item accent-green" data-category="bienestar">
+                    <div class="service-icon">🏥</div>
+                    <h3>Atención en Salud Primaria</h3>
+                    <p>Ante cualquier malestar físico o emergencia dentro del campus, cuentas con el servicio de enfermería y medicina general de Bienestar Universitario.</p>
+                </div>
+
                 <div class="service-item accent-cyan" data-category="tecnologico">
                     <div class="service-icon">💻</div>
                     <h3>Soporte Técnico TIC y Savio</h3>
                     <p>¿Problemas para acceder a tus notas, correo o plataforma virtual Savio? El equipo de soporte te soluciona problemas de credenciales al instante.</p>
                 </div>
-                <!-- Recurso 6 -->
+                <div class="service-item accent-cyan" data-category="tecnologico">
+                    <div class="service-icon">📊</div>
+                    <h3>Portal Banner (Notas y Matrículas)</h3>
+                    <p>La plataforma clave para tu vida administrativa. Aquí consultas tu horario, revisas tus notas finales de corte e inscribes tus asignaturas.</p>
+                </div>
+                <div class="service-item accent-cyan" data-category="tecnologico">
+                    <div class="service-icon">📶</div>
+                    <h3>Red Wi-Fi Eduroam</h3>
+                    <p>Conéctate al internet inalámbrico de alta velocidad en todo el campus utilizando tu correo institucional de forma segura.</p>
+                </div>
+
                 <div class="service-item accent-purple" data-category="futuro">
                     <div class="service-icon">🚀</div>
                     <h3>Semilleros de Investigación</h3>
                     <p>¿Te apasiona innovar? Conéctate con proyectos reales de investigación científica y aplicada desde tu primer semestre con docentes líderes.</p>
                 </div>
-                <!-- Recurso 7 -->
                 <div class="service-item accent-purple" data-category="futuro">
                     <div class="service-icon">💼</div>
                     <h3>Desarrollo Profesional y Bolsa</h3>
-                    <p>Conoce las alianzas empresariales y convenios internacionales que tiene la UTB para proyectar tus prácticas o intercambios académicos futuros.</p>
+                    <p>Conoce las alianzas empresariales y convenios internacionales que tiene la UTB para proyectar tus prácticas profesionales futuras.</p>
+                </div>
+                <div class="service-item accent-purple" data-category="futuro">
+                    <div class="service-icon">✈️</div>
+                    <h3>Internacionalización y Movilidad</h3>
+                    <p>¡Planea tu intercambio! Conoce los convenios con universidades del exterior para cursar un semestre internacional cuidando tu promedio académico.</p>
+                </div>
+                <div class="service-item accent-purple" data-category="futuro">
+                    <div class="service-icon">💡</div>
+                    <h3>Centro de Emprendimiento (CEUTB)</h3>
+                    <p>¿Tienes una idea de negocio o un proyecto innovador? Recibe asesoría experta y acompañamiento para transformar tus ideas en empresas reales.</p>
                 </div>
             </div>
         </section>
@@ -88,25 +112,6 @@
         <p>&copy; 2026 Universidad Tecnológica de Bolívar. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- LÓGICA DE FILTRADO INTERACTIVA -->
-    <script>
-        function filterResources(category) {
-            // Actualizar botones activos
-            const buttons = document.querySelectorAll('.btn-filter');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // Filtrar tarjetas
-            const items = document.querySelectorAll('.service-item');
-            items.forEach(item => {
-                if (category === 'todos' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
