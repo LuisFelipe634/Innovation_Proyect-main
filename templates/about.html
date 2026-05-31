@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca del Proyecto - Desarrollo Universitario Renovado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo UTB" class="logo-img">
+                <h1 class="logo-text">Experiencia UTB</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/services">Mapa de Recursos</a></li>
+                <li><a href="/utb">Mi Escuela</a></li>
+                <li><a href="/about" class="active">El Proyecto</a></li>
+            </ul>
+                
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero small-hero">
+            <h1>Acerca del Proyecto</h1>
+            <p>Una iniciativa para transformar la experiencia de los estudiantes de primer semestre mediante orientación práctica y recursos accesibles.</p>
+            <p class="lead">Esta plataforma nace como respuesta directa al desafío pedagógico: <strong>¿Cómo mejorar la experiencia universitaria de los estudiantes de primer semestre en la UTB?</strong></p>
+            <p>Transformamos la materia de Desarrollo Universitario en un espacio de orientación real, herramientas claras y acompañamiento práctico desde el primer día.</p>
+        </section>
+
+        <section class="tab-card content-section animate-fade-in">
+
+            <div class="content-grid">
+                <div class="project-summary">
+                    <h3>Diagnóstico del Problema</h3>
+                    <p>Los nuevos estudiantes no aprovechan los recursos institucionales porque los descubren tarde o por casualidad. Esto genera ansiedad, desorientación y una adaptación universitaria más difícil.</p>
+
+                    <h3>La Solución</h3>
+                    <p>Reformular la asignatura con una metodología activa, inmersiva y práctica, acompañada por mentores avanzados y un mapa de recursos filtrado según la necesidad real del estudiante.</p>
+
+                    <h3>Resultados Esperados</h3>
+                    <p>Mayor acceso a apoyos académicos, mejor adaptación social, uso efectivo de plataformas como Savio y reducción del estrés de los primeros semestres.</p>
+                </div>
+
+                <div class="content-panels">
+                    <article class="info-card accent-blue">
+                        <span class="card-label">Enfoque del Portal</span>
+                        <h3>Orientación clara y personalizada</h3>
+                        <p>Un espacio diseñado para que cada estudiante encuentre rutas, apoyos y recursos relevantes a su facultad, carrera y necesidad inmediata.</p>
+                    </article>
+
+                    <article class="info-card accent-cyan">
+                        <span class="card-label">Metodología viva</span>
+                        <h3>De la teoría a la experiencia</h3>
+                        <p>La materia se convierte en talleres, recorridos guiados, mentorías y prácticas reales en los espacios institucionales.</p>
+                    </article>
+
+                    <article class="info-card accent-green">
+                        <span class="card-label">Tecnologías del entorno</span>
+                        <h3>Flask + HTML/CSS/JS</h3>
+                        <p>Aplicación web ligera con backend en Python y Flask, usando plantillas Jinja y estilos responsivos para una experiencia fluida.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad Tecnológica de Bolívar. Propuesta de Innovación de Experiencia.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

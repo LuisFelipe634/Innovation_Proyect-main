@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultad de Transformación Digital - UTB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/avif" href="{{ url_for('static', filename='images/digital.avif') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo UTB" class="logo-img">
+                <h1 class="logo-text">Experiencia UTB</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('services') }}">Mapa de Recursos</a></li>
+                <li><a href="{{ url_for('utb') }}" class="active">Mi Escuela</a></li>
+                <li><a href="{{ url_for('about') }}">El Proyecto</a></li>
+            </ul>
+                
+        </div>
+    </nav>
+
+    <main class="container">
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('utb') }}" class="btn-back">← Volver a Escuelas</a>
+        </div>
+
+        <section class="tab-card animate-fade-in" style="margin-top: 1.5rem;">
+            <h2>Escuela de Transformación Digital</h2>
+            <p class="lead">Espacios pensados para las carreras del mañana: Ingeniería de Sistemas, Ciencia de Datos y afines.</p>
+            
+            <div class="program-details">
+                <h3>Apoyos Clave y Recursos que encontrarás:</h3>
+                <div class="services-grid" style="margin-top: 1.5rem;">
+                    <div class="service-item accent-blue">
+                        <h3>Laboratorios de Cómputo Avanzados</h3>
+                        <p>Espacios equipados con herramientas de desarrollo de software moderno y servidores dedicados.</p>
+                    </div>
+                    <div class="service-item accent-blue">
+                        <h3>Células de Innovación Tecnológica</h3>
+                        <p>Aprende cómo integrarte a proyectos de desarrollo reales bajo metodologías ágiles desde el primer año.</p>
+                    </div>
+                    <div class="service-item accent-blue">
+                        <h3>Tutorías de Programación</h3>
+                        <p>Monitores expertos listos para ayudarte en lógica de programación y resolver dudas de tus asignaturas base.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad Tecnológica de Bolívar. Todos los derechos reservados.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Universitario Renovado - UTB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo UTB" class="logo-img">
+                <h1 class="logo-text">Experiencia UTB: Primer Semestre</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Inicio</a></li>
+                <li><a href="/services">Mapa de Recursos</a></li>
+                <li><a href="/utb">Mi Escuela</a></li>
+                <li><a href="/about">El Proyecto</a></li>
+                
+            </ul>
+                
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SECTION ADAPTADA AL PROTOTIPO DEL TALLER -->
+        <section class="hero animate-fade-in">
+            <div class="hero-left">
+                <span class="badge-new">Innovación Pedagógica UTB</span>
+                <h1>Transformamos la materia de Desarrollo Universitario</h1>
+                <p>Pasamos de la teoría aburrida a una <strong>estrategia práctica y vivencial</strong>. Diseñada por estudiantes para estudiantes, con el fin de que conozcas, uses y disfrutes todos los recursos de la UTB antes de que los necesites de urgencia.</p>
+                <div class="hero-cta">
+                    <a class="btn-primary" href="/services">🔍 Buscar Recursos por Necesidad</a>
+                    <a class="btn-primary secondary" href="#propuesta">Ver los 4 Pilares</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="welcome-info animate-fade-in">
+            <div class="tab-card layout-info-general">
+                <div class="info-general-text">
+                    <span class="badge-new" style="background: var(--accent-blue); color: var(--primary-color);">Tu Portal de Orientación</span>
+                    <h2>¿Qué encontrarás en este espacio interactivo?</h2>
+                    <p class="lead">Bienvenido a la plataforma oficial del rediseño de <strong>Desarrollo Universitario</strong>. Este espacio fue creado para ser tu brújula digital durante tus primeras semanas en la Universidad Tecnológica de Bolívar.</p>
+                    
+                    <p>Aquí centralizamos de manera didáctica las herramientas que la universidad tiene dispuestas para asegurar tu éxito académico, adaptación social y bienestar emocional. Ya no tendrás que enterarte de las cosas por casualidad o cuando el semestre esté avanzado.</p>
+                    
+                    <div class="quick-highlights">
+                        <div class="highlight-item">
+                            <strong>🎯 Rutas Personalizadas:</strong> Información específica filtrada según los laboratorios, salas y apoyos directos de tu propia facultad o escuela.
+                        </div>
+                        <div class="highlight-item">
+                            <strong>🔍 Buscador Inteligente de Soluciones:</strong> Un mapa de recursos diseñado para responder a lo que sientes o necesitas en tiempo real (académico, financiero o emocional).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-general-stats">
+                    <h3>Información Relevante</h3>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <p><strong>Práctico y Vivencial:</strong> La materia ahora incluye talleres reales de Savio, mentorías con estudiantes avanzados y recorridos guiados.</p>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">0%</span>
+                        <p><strong>Teoría Rígida:</strong> Evaluamos mediante la construcción de tu propio mapa de ruta universitaria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALOR AGREGADO / EMPATÍA -->
+        <section id="propuesta" class="value-proposition">
+            <div class="section-header">
+                <h2>Nuestra Propuesta de Valor</h2>
+                <p>Atacamos directamente la desorientación y la frustración silenciosa del primer semestre a través de cuatro acciones clave:</p>
+            </div>
+            
+            <div class="info-cards">
+                <article class="info-card accent-blue">
+                    <div class="card-icon">🏛️</div>
+                    <span class="card-label">Acción 01</span>
+                    <h3>Sesiones Temáticas Semanales</h3>
+                    <p>Inmersiones guiadas directo en los espacios clave: Biblioteca, Bienestar, Consejería y laboratorios técnicos de la mano de sus encargados.</p>
+                </article>
+
+                <article class="info-card accent-cyan">
+                    <div class="card-icon">💬</div>
+                    <span class="card-label">Acción 02</span>
+                    <h3>Charlas con Avanzados</h3>
+                    <p>Espacios reales y honestos con estudiantes de semestres superiores. Consejos, mitos de las carreras y cómo ganar las materias.</p>
+                </article>
+
+                <article class="info-card accent-green">
+                    <div class="card-icon">💻</div>
+                    <span class="card-label">Acción 03</span>
+                    <h3>Talleres Prácticos de Plataformas</h3>
+                    <p>Sesiones interactivas donde aprenderás a usar Savio, registrar materias, reservar espacios físicos y manejar el ecosistema TIC de forma real.</p>
+                </article>
+
+                <article class="info-card accent-purple">
+                    <div class="card-icon">🗺️</div>
+                    <span class="card-label">Acción 04</span>
+                    <h3>Plan de Ruta Personal</h3>
+                    <p>Cada estudiante construye un mapa a la medida según su carrera y necesidades (académicas, emocionales, deportivas u orientadas a la investigación).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE COCREADORES -->
+        <section class="creators-section">
+            <div class="tab-card text-center">
+                <h2>¿Quiénes idearon esta transformación?</h2>
+                <p>Este portal plasma la solución del <strong>Desafío 1 - Experiencia UTB</strong> creado colectivamente por:</p>
+                <div class="team-grid">
+                    <div class="team-member"><strong>Luis Felipe Salas Pajaró</strong></div>
+                    <div class="team-member"><strong>Jesús Miguel Díaz</strong></div>
+                    <div class="team-member"><strong>Gabriel Elles Guzmán</strong></div>
+                    <div class="team-member"><strong>Brayder Lombana Pombo</strong></div>
+                    <div class="team-member"><strong>Simon Elles</strong></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taller de Innovación UTB - Experiencia del Estudiante Renovada.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

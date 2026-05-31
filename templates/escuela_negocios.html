@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela de Negocios - UTB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo UTB" class="logo-img">
+                <h1 class="logo-text">Experiencia UTB</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('services') }}">Mapa de Recursos</a></li>
+                <li><a href="{{ url_for('utb') }}" class="active">Mi Escuela</a></li>
+                <li><a href="{{ url_for('about') }}">El Proyecto</a></li>
+            </ul>
+                
+        </div>
+    </nav>
+
+    <main class="container">
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('utb') }}" class="btn-back">← Volver a Escuelas</a>
+        </div>
+
+        <section class="tab-card animate-fade-in" style="margin-top: 1.5rem;">
+            <h2>Escuela de Negocios, Leyes y Sociedad</h2>
+            <p class="lead">Formando líderes estratégicos: Administración de Empresas, Economía, Negocios Internacionales y Contaduría.</p>
+            
+            <div class="program-details">
+                <h3>Apoyos Clave y Recursos que encontrarás:</h3>
+                <div class="services-grid" style="margin-top: 1.5rem;">
+                    <div class="service-item accent-purple">
+                        <h3>Laboratorio Financiero (Punto Bolsa)</h3>
+                        <p>Acceso y capacitación para operar plataformas de simulación económica y análisis de mercados bursátiles mundiales.</p>
+                    </div>
+                    <div class="service-item accent-purple">
+                        <h3>Centro de Emprendimiento</h3>
+                        <p>Asesorías y mentorías especializadas para estructurar ideas de negocio y potenciar startups creadas por alumnos.</p>
+                    </div>
+                    <div class="service-item accent-purple">
+                        <h3>Redes de Networking Estudiantil</h3>
+                        <p>Vinculación desde primer corte con gremios empresariales, visitas corporativas y ferias profesionales de la región.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad Tecnológica de Bolívar. Todos los derechos reservados.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

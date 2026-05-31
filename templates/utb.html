@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos por Escuela - UTB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo UTB" class="logo-img">
+                <h1 class="logo-text">Experiencia UTB</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('services') }}">Mapa de Recursos</a></li>
+                <li><a href="{{ url_for('utb') }}" class="active">Mi Escuela</a></li>
+                <li><a href="{{ url_for('about') }}">El Proyecto</a></li>
+            </ul>
+                
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero small-hero">
+            <h1>Tu Ruta de Acuerdo a tu Programa Académico</h1>
+            <p>La materia de Desarrollo Universitario no es igual para todos. Haz clic en tu escuela para descubrir los espacios, laboratorios y apoyos diseñados a la medida de tu carrera.</p>
+        </section>
+
+        <div class="schools-grid-large">
+            <a href="{{ url_for('digital') }}" class="school-card-link">
+                <div class="school-image-btn accent-blue" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('{{ url_for('static', filename='images/digital.avif') }}');">
+                    <div class="school-btn-info">
+                        <h2>Escuela de Transformación Digital</h2>
+                        <span class="explore-badge">Explorar mi ruta →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('ingenieria') }}" class="school-card-link">
+                <div class="school-image-btn accent-cyan" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('{{ url_for('static', filename='images/ingenieria.jpg') }}');">
+                    <div class="school-btn-info">
+                        <h2>Escuela de Ingeniería, Arquitectura & Diseño</h2>
+                        <span class="explore-badge">Explorar mi ruta →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('negocios') }}" class="school-card-link">
+                <div class="school-image-btn accent-purple" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('{{ url_for('static', filename='images/negocios.jpeg') }}');">
+                    <div class="school-btn-info">
+                        <h2>Escuela de Negocios, Leyes y Sociedad</h2>
+                        <span class="explore-badge">Explorar mi ruta →</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad Tecnológica de Bolívar. Todos los derechos reservados.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>     
